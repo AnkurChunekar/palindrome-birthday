@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+}
+
+button, #output, label {
+    display: block;
+    margin: auto;
+}
+
+h1{
+    font-size: xx-large;
+    margin: 2rem;
+}
+
+input{
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+
+}
