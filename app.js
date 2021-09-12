@@ -43,12 +43,14 @@ function convertDateToString(date) {
 }
 
 function convertDateToAllFormats(date) {
-  const ddmmyyyy = date.day + date.month + date.year;
-  const mmddyyyy = date.month + date.day + date.year;
-  const yyyymmdd = date.year + date.month + date.day;
-  const ddmmyy = date.day + date.month + date.year.slice(-2);
-  const mmddyy = date.month + date.day + date.year.slice(-2);
-  const yymmdd = date.year.slice(-2) + date.month + date.day;
+  var dateString = convertDateToString(date);
+
+  const ddmmyyyy = dateString.day + dateString.month + dateString.year;
+  const mmddyyyy = dateString.month + dateString.day + dateString.year;
+  const yyyymmdd = dateString.year + dateString.month + dateString.day;
+  const ddmmyy = dateString.day + dateString.month + dateString.year.slice(-2);
+  const mmddyy = dateString.month + dateString.day + dateString.year.slice(-2);
+  const yymmdd = dateString.year.slice(-2) + dateString.month + dateString.day;
 
   const array = [ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyy, mmddyy, yymmdd];
   return array;
@@ -123,8 +125,8 @@ function nextPalindromeDate(date) {
 
   while (1) {
     counter++;
-    var dateString = convertDateToString(nextDate);
-    var isPalindrome = checkPalindromeForAllDates(dateString);
+
+    var isPalindrome = checkPalindromeForAllDates(nextDate);
 
     if (isPalindrome) {
       break;
@@ -146,9 +148,9 @@ function clickHandler() {
     var arrayOfDate = birthdate.split("-");
 
     const date = {
-      day: arrayOfDate[2],
-      month: arrayOfDate[1],
-      year: arrayOfDate[0],
+      day: Number(arrayOfDate[2]),
+      month: Number(arrayOfDate[1]),
+      year: Number(arrayOfDate[0]),
     };
 
     var palindrome = checkPalindromeForAllDates(date);
