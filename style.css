@@ -1,19 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --primary-color: #3aafa9;
+    --font-color-one: #17252a;
+    --font-color-two: #def2f1;
+}
+
 body{
     text-align: center;
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
 }
 
-button, #output, label {
-    display: block;
-    margin: auto;
-}
-
-h1{
+h1 {
     font-size: xx-large;
-    margin: 2rem;
+    margin: 3.5rem 2rem 1.5rem 2rem;
+    color: var(--font-color-one);
 }
 
-input{
-    padding: 0.5rem 1rem;
-    margin: 1rem;
-
+p{
+    width: 70%;
+    margin: auto;
+    font-style: oblique;
+    text-align: -webkit-center;
+    color: var(--font-color-two);
 }
+
+label{
+    display: block;
+    margin: 2rem auto 0.5rem auto;
+    font-size: large;
+    font-weight: 500;
+}
+
+#output{
+    font-size: x-large;
+    margin: 2rem auto;
+    width: 60%;
+}
+
+input {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    border: 3px solid var(--font-color-one);
+    color: var(--font-color-one);
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+button {
+    border: none;
+    background-color: #2b7a78;
+    padding: 0.6rem 2.5rem;
+    margin: 0.5rem auto;
+    color: var(--font-color-two);
+    font-family: 'Poppins';
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
