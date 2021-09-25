@@ -170,6 +170,8 @@ function clickHandler() {
         counter +
         " days!";
     }
+  } else {
+    output.innerText = "Please enter a valid date";
   }
 }
 
